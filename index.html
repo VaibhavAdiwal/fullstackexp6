@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment 2.2 Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Security & Middleware Simulation</h1>
+
+<button onclick="show('exp1')">Middleware</button>
+<button onclick="show('exp2')">JWT Auth</button>
+<button onclick="show('exp3')">Transaction</button>
+
+<!-- EXP 1 -->
+<div id="exp1" class="section">
+  <h2>Middleware</h2>
+  <button onclick="runMiddleware()">Send Request</button>
+  <div id="logs"></div>
+</div>
+
+<!-- EXP 2 -->
+<div id="exp2" class="section">
+  <h2>JWT Authentication</h2>
+  <input id="username" placeholder="Username">
+  <input id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button onclick="accessProtected()">Access Protected</button>
+  <p id="authStatus"></p>
+</div>
+
+<!-- EXP 3 -->
+<div id="exp3" class="section">
+  <h2>Transaction System</h2>
+  <p>Balance: ₹<span id="balance">1000</span></p>
+  <input id="amount" placeholder="Enter amount">
+  <button onclick="transfer()">Transfer</button>
+  <p id="txStatus"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
